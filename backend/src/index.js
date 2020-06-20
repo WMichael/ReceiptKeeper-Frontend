@@ -1,15 +1,33 @@
-var express = require('express');
-var morgan = require('morgan');
-var helemt = require('helmet');
+// Dependencies
+const express = require('express');
+const morgan = require('morgan');
+const helmet = require('helmet');
+const mongoose = require('mongoose');
+const ReceiptRouter = require('./Routes/ReceiptRouter');
+require('dotenv').config();
 
 const app = express();
-const port = 8080;
+app.use(morgan("common"));
+app.use(helmet())
+app.use(express.json());
+app.use('/receipts', ReceiptRouter);
+const port = process.env.PORT || 8081;
 
-app.listen(port, '0.0.0.0', () => console.log(`Listening at localhost:${port}`));
+mongoose.connect(process.env.DB, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+const db = mongoose.connection;
 
-app.get('/', (res,req) => {
-    console.log('Hi');
+db.on('error', console.error.bind(console, 'DB connection error!'));
+db.once('open', () => {
+    app.listen(port, () => console.log(`Listening at localhost:${port} 🎉`));
+});    
+
+app.get('/', (req,res,next) => {
     res.send({
-        message: "ReceiptKeeper!"
-    });
+        message: "ReceiptKeeper! 🧾"
+    });   
+});    
+
+// Error handling
+app.use(function (err, req, res, next) {
+    res.status(err.status ? err.status : 500).send(err.message ? err.message : "Opps an error has occured! 🔧");
 });
