@@ -4,9 +4,11 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
 const ReceiptRouter = require('./Routes/receipt.router');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
+app.use(cors());
 app.use(morgan("common"));
 app.use(helmet())
 app.use(express.json());

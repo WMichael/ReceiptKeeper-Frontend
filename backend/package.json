@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/WMichael/ReceiptKeeper#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.23.1",
