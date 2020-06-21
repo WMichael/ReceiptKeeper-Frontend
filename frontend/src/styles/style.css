@@ -1,0 +1,11 @@
+.fakeLink {
+    color: #4183C4;
+    text-decoration: none;
+    background: none!important;
+    border: none;
+    padding: 0!important;
+}
+
+.fakeLink:hover {
+    cursor: pointer;
+}
