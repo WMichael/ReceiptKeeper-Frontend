@@ -1,7 +1,6 @@
 const express = require('express');
-const ReceiptModel = require('../Models/ReceiptModel');
+const ReceiptModel = require('../Models/receipt.model');
 const router = express.Router();
-
 
 router.get('/', (req,res,next) => {
     ReceiptModel.find().exec((err, result) => {

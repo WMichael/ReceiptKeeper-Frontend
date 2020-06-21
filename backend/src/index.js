@@ -3,7 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const mongoose = require('mongoose');
-const ReceiptRouter = require('./Routes/ReceiptRouter');
+const ReceiptRouter = require('./Routes/receipt.router');
 require('dotenv').config();
 
 const app = express();

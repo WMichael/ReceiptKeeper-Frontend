@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ReceiptSchema = require('../Schemas/ReceiptSchema');
+const ReceiptSchema = require('../Schemas/receipt.schema');
 
 const ReceiptModel = mongoose.model('Receipt', ReceiptSchema);
 
