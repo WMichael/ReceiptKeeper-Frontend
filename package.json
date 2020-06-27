@@ -4,6 +4,7 @@
   "description": "Simple web app to store and view receipts. The purpose of this project is to familarise myself more with Express & ReactJS.",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"cd backend && npm run start \" \"cd frontend && npm start",
     "dev": "concurrently \"cd backend && npm run dev \" \"cd frontend && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
