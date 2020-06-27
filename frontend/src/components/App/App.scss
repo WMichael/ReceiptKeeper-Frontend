@@ -1,3 +1,5 @@
+@import "../../styles/theme.scss";
+
 .App {
   margin-top: 10px;
   text-align: center;
@@ -36,4 +38,27 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navButton {
+  background-color: $secondary-colour;
+  color: white;
+  border: 2px white $secondary-colour;
+  font-size: 1em;
+  padding: 0.5em;
+  border-radius: 5px;
+  margin: 0 3px;
+}
+
+.navButton:hover {
+  border: 2px white solid;
+}
+
+.navButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+nav {
+  margin: 15px;
 }

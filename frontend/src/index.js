@@ -1,7 +1,6 @@
-import 'semantic-ui-less/semantic.less'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './components/App/App';
 import * as serviceWorker from './serviceWorker';
 

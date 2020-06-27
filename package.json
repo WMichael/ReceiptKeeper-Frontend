@@ -1,0 +1,23 @@
+{
+  "name": "receiptkeeper",
+  "version": "1.0.0",
+  "description": "Simple web app to store and view receipts. The purpose of this project is to familarise myself more with Express & ReactJS.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npm run dev \" \"cd frontend && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WMichael/ReceiptKeeper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WMichael/ReceiptKeeper/issues"
+  },
+  "homepage": "https://github.com/WMichael/ReceiptKeeper#readme",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
