@@ -1,8 +1,7 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
-  "description": "Frontend of ReceiptKeeper",
-  "main": "src/index.js",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
@@ -16,9 +15,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "heroku-postbuild": "npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -27,14 +24,16 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WMichael/ReceiptKeeper.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WMichael/ReceiptKeeper/issues"
-  },
-  "homepage": "https://github.com/WMichael/ReceiptKeeper#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
