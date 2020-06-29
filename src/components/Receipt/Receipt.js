@@ -32,7 +32,7 @@ class Receipt extends React.Component {
 
     deleteReceipt() {
         if(window.confirm(`Are you sure you want to permanently delete ${this.state.name}?`)) {
-            fetch(`${process.env.REACT_APP_API}/receipts/${this.state.receipt_id}`, {
+            fetch(`http://${window.location.hostname}:${process.env.REACT_APP_PORT}/receipts/${this.state.receipt_id}`, {
                 method: 'DELETE',
             }).then(res => {
                 console.log("Successfully deleted!");
@@ -45,7 +45,7 @@ class Receipt extends React.Component {
 
     saveReceipt() {
         this.switchMode();
-        fetch(`${process.env.REACT_APP_API}/receipts/${this.state.receipt_id}`, {
+        fetch(`http://${window.location.hostname}:${process.env.REACT_APP_PORT}/receipts/${this.state.receipt_id}`, {
             method: 'PUT',
             headers: {
                 'Content-type' : 'application/json'

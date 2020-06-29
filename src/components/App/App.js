@@ -18,7 +18,7 @@ class App extends React.Component {
   }
 
   fetchReceipts() {
-    fetch(`${process.env.REACT_APP_API}/receipts`)
+    fetch(`http://${window.location.hostname}:${process.env.REACT_APP_PORT}/receipts`)
       .then(res => res.json())
       .then(
         (result) => {
