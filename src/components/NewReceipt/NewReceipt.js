@@ -22,7 +22,7 @@ class NewReceipt extends React.Component {
     }
 
     saveReceipt() {
-        fetch(`http://${window.location.hostname}:${process.env.REACT_APP_PORT}/receipts/add`,{
+        fetch(`${process.env.REACT_APP_API}/receipts/add`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
